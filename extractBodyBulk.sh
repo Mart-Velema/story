@@ -12,12 +12,12 @@ getHtmlBody()
         local filename=$(basename -- "$file")
         filename="${filename%.*}"
 
-        local body_content=$(pandoc "$dir/$filename.html" --standalone --to html5 --quiet | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d')
+        local body_content=$(pandoc "$dir/$filename.html" --standalone --to html5 --quiet 2>/dev/null | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d')
 
         body_content=$(echo "$body_content" | sed 's/<br \/>/<br>/g')
 
         echo "$body_content" > "$outputdir/${filename//[^a-zA-Z0-9]/-}.html"
-        rm "$dir/$filename.html"
+        # rm "$dir/$filename.html"
     done
 }
 
