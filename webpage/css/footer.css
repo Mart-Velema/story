@@ -9,6 +9,7 @@ footer {
 
 footer div {
     padding-inline: 10%;
+    align-self: center;
 }
 
 footer ul {
@@ -19,4 +20,9 @@ footer ul {
 
 footer li {
     list-style: none;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--text-colour);
 }
