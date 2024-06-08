@@ -5,6 +5,7 @@ source config.sh
 getHtmlBody() 
 {
     local dir="$1"
+    local directoryName=$(echo "${2//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
     for file in "$dir"/*.odt; 
     do
         libreoffice --headless --convert-to html "$file" --outdir "$dir"
@@ -34,7 +35,7 @@ getHtmlBody()
 
         local output_filename=$(echo "${filename//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
         
-        echo "$body_content" > "$outputdir/$output_filename.html"
+        echo "$body_content" > "$outputdir/$directoryName-$output_filename.html"
 
         rm -f "$htmlFile"
     done
@@ -45,7 +46,7 @@ do
     fullpath="$basedir/$dir"
     if [ -d "$fullpath" ];
     then
-        getHtmlBody "$fullpath"
+        getHtmlBody "$fullpath" "$dir"
     else
         echo "Error: Dir $fullpath not found"
     fi
