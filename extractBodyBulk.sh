@@ -4,30 +4,30 @@ source config.sh
 
 getHtmlBody() 
 {
-    for file in *.odt; 
+    local dir="$1"
+    for file in "$dir"/*.odt; 
     do
         libreoffice --headless --convert-to html "$file"
 
-        filename=$(basename -- "$file")
+        local filename=$(basename -- "$file")
         filename="${filename%.*}"
 
-        body_content=$(pandoc "${filename}.html" --standalone --to html5 | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d')
+        local body_content=$(pandoc "${filename}.html" --standalone --to html5 | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d')
 
         body_content=$(echo "$body_content" | sed 's/<br \/>/<br>/g')
 
         echo "$body_content" > "$outputdir/${filename//[^a-zA-Z0-9]/-}.html"
-        rm "${filename}_html5.html" "${filename}.html"
+        rm "${filename}.html"
     done
 }
 
-for dir in "$basedir/${directories[@]}";
+for dir in "${directories[@]}"; 
 do
-    if [ -d "$dir" ];
+    fullpath="$basedir/$dir"
+    if [ -d "$fullpath" ];
     then
-        cd "$dir" || exit
-        getHtmlBody
-        cd - || exit
+        getHtmlBody "$fullpath"
     else
-        echo "Error: Dir $dir not found"
+        echo "Error: Dir $fullpath not found"
     fi
 done
