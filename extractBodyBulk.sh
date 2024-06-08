@@ -21,12 +21,15 @@ getHtmlBody()
     done
 }
 
+pids=()
+
 for dir in "${directories[@]}"; 
 do
     fullpath="$basedir/$dir"
     if [ -d "$fullpath" ];
     then
-        getHtmlBody "$fullpath"
+        getHtmlBody "$fullpath" &
+        pids+=($!)
     else
         echo "Error: Dir $fullpath not found"
     fi
