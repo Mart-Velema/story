@@ -1,9 +1,8 @@
 <footer>
     <div>
-        <p>
-            This is the official website of the Infinite Night Timeline. <br><br>
-            Here you can read up on all the lore that is related to everything Infinite Night
-        </p>
+        <p>This is the official website of the Infinite Night Timeline.</p>
+        <hr>
+        <p>Here you can read up on all the lore that is related to everything Infinite Night</p>
     </div>
     <div>
         <ul>
@@ -14,9 +13,8 @@
         </ul>
     </div>
     <div>
-        <p>
-            Where to find me (I swear I'll do something with my socials one day):
-        </p>
+        <p>Where to find me (I swear I'll do something with my socials one day):</p>
+        <hr>
         <ul>
             <li><a href="https://discord.gg/xvNg7Br"><img src="img/faviconD.ico" alt="Discord" width="32" height="32"></a></li>
             <li><a href="https://www.youtube.com/channel/UCPmDtSr9w7x0nsee1GsdC4A"><img src="img/faviconYT.ico" alt="YouTube" width="32" height="32"></a></li>
