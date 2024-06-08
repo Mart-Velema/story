@@ -9,3 +9,9 @@ header {
     box-shadow: 0px 1px 3px black;
     color: var(--text-colour);
 }
+
+header img {
+    object-fit: scale-down;
+    height: 40px;
+    padding-left: 1vh;
+}

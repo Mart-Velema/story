@@ -1,7 +1,7 @@
 @import url(header.css);
 @import url(footer.css);
 
-* {
+:root {
     font-family: "sans-serif";
     --header-height: 50px;
     --primary-colour: #242424;

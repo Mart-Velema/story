@@ -11,7 +11,7 @@
         include 'components/header.php';
     ?>
     <main>
-        <article class="container">
+        <article>
             <?php
                 if(array_key_exists('d', $_GET))
                 {
@@ -35,5 +35,6 @@
     <?php
         include 'components/footer.php';
     ?>
+    <script src="js/header.js"></script>
 </body>
 </html>
