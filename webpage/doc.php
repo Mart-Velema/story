@@ -9,11 +9,12 @@
 <body>
     <div class="container">
         <?php
-            if(array_key_exists('document', $_GET))
+            if(array_key_exists('d', $_GET))
             {
-                if(file_exists('output/' . $_GET['document'] . '.html'))
+                $documentName = strtolower($_GET['d']);
+                if(file_exists('output/' . $documentName . '.html'))
                 {
-                    include 'output/' . $_GET['document'] . '.html';
+                    include 'output/' . $documentName . '.html';
                 }
                 else
                 {
