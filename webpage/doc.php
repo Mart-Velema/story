@@ -7,25 +7,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <?php
-            if(array_key_exists('d', $_GET))
-            {
-                $documentName = strtolower($_GET['d']);
-                if(file_exists('output/' . $documentName . '.html'))
+    <?php
+        include 'components/header.php';
+    ?>
+    <main>
+        <article class="container">
+            <?php
+                if(array_key_exists('d', $_GET))
                 {
-                    include 'output/' . $documentName . '.html';
+                    $documentName = strtolower($_GET['d']);
+                    if(file_exists('output/' . $documentName . '.html'))
+                    {
+                        include 'output/' . $documentName . '.html';
+                    }
+                    else
+                    {
+                        echo "File does not exist";
+                    }
                 }
                 else
                 {
-                    echo "File does not exist";
+                    echo "No file selected";
                 }
-            }
-            else
-            {
-                echo "No file selected";
-            }
-        ?>
-    </div>
+            ?>
+        </article>
+    </main>
+    <?php
+        include 'components/footer.php';
+    ?>
 </body>
 </html>
