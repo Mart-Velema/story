@@ -1,0 +1,11 @@
+header {
+    position: fixed;
+    width: 100vw;
+    height: var(--header-height);
+    background-color: var(--secondary-colour);
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    align-items: center;
+    box-shadow: 0px 1px 3px black;
+    color: var(--text-colour);
+}

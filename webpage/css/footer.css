@@ -1,0 +1,22 @@
+footer {
+    width: 100vw;
+    min-height: 50px;
+    background-color: var(--secondary-colour);
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    color: var(--text-colour);
+}
+
+footer div {
+    padding-inline: 10%;
+}
+
+footer ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+footer li {
+    list-style: none;
+}
