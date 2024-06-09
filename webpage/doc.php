@@ -1,10 +1,31 @@
+<?php
+    if(array_key_exists('d', $_GET))
+    {
+        $documentName = strtolower($_GET['d']);
+        if(file_exists('output/' . $documentName . '.html'))
+        {
+            $file = true;
+        }
+        else
+        {
+            $documentName = "File does not exist";
+            $file = false;
+        }
+    }
+    else
+    {
+        $documentName = "No file selected";
+        $file = false;
+    }
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title>Document</title>
+    <title><?php echo $documentName; ?></title>
 </head>
 <body>
     <?php
@@ -13,21 +34,13 @@
     <main>
         <article>
             <?php
-                if(array_key_exists('d', $_GET))
+                if($file)
                 {
-                    $documentName = strtolower($_GET['d']);
-                    if(file_exists('output/' . $documentName . '.html'))
-                    {
-                        include 'output/' . $documentName . '.html';
-                    }
-                    else
-                    {
-                        echo "File does not exist";
-                    }
+                    include 'output/' . $documentName . '.html';
                 }
                 else
                 {
-                    echo "No file selected";
+                    echo $documentName;
                 }
             ?>
         </article>
@@ -36,5 +49,6 @@
         include 'components/footer.php';
     ?>
     <script src="js/header.js"></script>
+    <script src="js/document-code.js"></script>
 </body>
 </html>

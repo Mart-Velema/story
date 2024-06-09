@@ -1,5 +1,17 @@
 <header id="header">
-    <div><a href="index.php"><img src="img/fedora.png" alt="Guinea pig logo"></a></div>
-    <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestiae iusto fugit, aperiam eaque maiores soluta eligendi beatae libero commodi ipsum quis ea? Praesentium rerum atque modi nostrum, sint sapiente minus?</div>
-    <div>text</div>
+    <a href="index.php"><img src="img/fedora.png" alt="Guinea pig logo"></a>
+    <div></div>
+    <p>
+        Document code, click to copy:<br>
+        <?php
+            if($file)
+            {
+                echo '<button onclick="copyCodeToClipboard()"><b id="document-code">' . $documentName . '</b></button>';
+            }
+            else
+            {
+                echo 'Invalid document code';
+            }
+        ?>
+    </p>
 </header>
