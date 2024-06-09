@@ -112,11 +112,27 @@ article h1.ctl {
     :root {
         --page-width: 90vw;
     }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .story-links {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 600px) {
     :root {
         --page-width: 70vw;
+    }
+
+    footer {
+        grid-template-columns: 1fr;
+    }
+
+    .story-links {
+        flex-direction: column;
     }
 }
 
@@ -124,16 +140,41 @@ article h1.ctl {
     :root {
         --page-width: 60vw;
     }
+
+    footer {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    .story-links {
+        flex-direction: column;
+    }
 }
 
 @media only screen and (min-width: 992px) {
     :root {
         --page-width: 50vw;
     }
+
+    footer {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    .story-links {
+        flex-direction: row;
+    }
 }
 
 @media only screen and (min-width: 1200px) {
     :root {
         --page-width: 40vw;
+    }
+
+    
+    footer {
+        grid-template-columns: 20% 60% 20%;
+    }
+
+    .story-links {
+        flex-direction: row;
     }
 }

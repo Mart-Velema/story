@@ -5,7 +5,7 @@
         <p>Here you can read up on all the lore that is related to everything Infinite Night</p>
     </div>
     <div>
-        <ul>
+        <ul class="story-links">
             <li><a href="https://story.infinite-night.com/doc.php?d=hellbound-steel">Hellbound Steel</a></li>
             <li><a href="https://story.infinite-night.com/doc.php?d=infinite-night">Mainline</a></li>
             <li><a href="https://story.infinite-night.com/doc.php?d=tale-of-anita">Tale of Anita</a></li>

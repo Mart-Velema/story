@@ -15,13 +15,13 @@ footer div {
 
 footer ul {
     display: flex;
-    flex-direction: row;
     justify-content: space-around;
     justify-self: center;
 }
 
 footer li {
     list-style: none;
+    text-decoration: underline;
 }
 
 footer a {
