@@ -66,7 +66,7 @@
                         '<div class="block">' .
                             '<a href="' . $value['link'] . '"><h2>' . $value['title'] . '</h2></a>' .
                             '<div class="inner-block">' .
-                                '<p>' . $value['body'] . '</p>' .
+                                '<p>' . nl2br($value['body']) . '</p>' .
                             '</div>' .
                         '</div>';
                     }
