@@ -19,7 +19,7 @@
             <li><a href="https://discord.gg/xvNg7Br"><img src="img/faviconD.ico" alt="Discord" width="32" height="32"></a></li>
             <li><a href="https://www.youtube.com/channel/UCPmDtSr9w7x0nsee1GsdC4A"><img src="img/faviconYT.ico" alt="YouTube" width="32" height="32"></a></li>
             <li><a href="https://www.twitch.tv/1_hele_euro"><img src="img/faviconT.ico" alt="Twitch" width="32" height="32"></a></li>
-            <li><a href="https://twitter.com/1HeleEuro"><img src="img/faviconX.ico" alt="Twitter, AKA X" width="32" height="32"></a></li>
+            <li><a href="https://twitter.com/1HeleEuro"><img src="img/faviconX.ico" alt="Twitter, AKA X" width="32" height="32" style="filter: grayscale(100);"></a></li>
         </ul>
         <hr>
         <p>

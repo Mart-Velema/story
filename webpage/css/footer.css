@@ -28,3 +28,12 @@ footer a {
     text-decoration: none;
     color: var(--text-colour);
 }
+
+footer img {
+    filter: grayscale(100);
+    transition: 0.5s;
+}
+
+footer img:hover {
+    filter: grayscale(0);
+}
