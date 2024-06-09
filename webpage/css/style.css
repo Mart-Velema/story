@@ -1,8 +1,12 @@
 @import url(header.css);
 @import url(footer.css);
 
+* {
+    margin: 0;
+}
+
 :root {
-    font-family: "sans-serif";
+    font-family: sans-serif;
     --header-height: 50px;
     --primary-colour: #242424;
     --secondary-colour: #1b0117;
@@ -23,65 +27,103 @@ main {
 }
 
 article {
-    width: 50vw;
+    width: var(--page-width);
 }
 
-p {
+article p {
     line-height: 115%; 
     margin-bottom: 0.1in; 
     background: transparent 
 }
 
-h1 {
+article h1 {
     margin-bottom: 0.08in; 
     background: transparent; 
     page-break-after: avoid 
 }
 
-h1.western {
+article h1.western {
     font-family: "Liberation Sans", sans-serif; 
     font-size: 18pt; 
     font-weight: bold 
 }
 
-h1.cjk { 
+article h1.cjk { 
     font-family: "Noto Sans CJK SC"; 
     font-size: 18pt; 
     font-weight: bold 
 }
 
-h1.ctl { 
+article h1.ctl { 
     font-family: "FreeSans"; 
     font-size: 18pt; 
     font-weight: bold 
 }
 
+.homepage {
+    width: var(--page-width);
+}
+
+.block {
+    display: flex;
+    background-color: var(--secondary-colour);
+    flex-direction: column;
+    margin-block: 2%;
+    padding: 2%;
+    min-height: 200px;
+    border-radius: 5px;
+    box-shadow: 0px 1px 5px black;
+}
+
+.block h2 {
+    margin-bottom: 10px;
+    transition: 0.5s;
+}
+
+.block h2:hover{
+    color: #8B728E;
+}
+
+.inner-block {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-grow: 1;
+    background-color: var(--primary-colour);
+    height: 100%;
+    box-shadow: 0px 0px 10px black inset;
+    border-radius: 5px;
+    padding: 3px;
+    font-size: large;
+    overflow-y: auto;
+}
+
 @media only screen and (max-width: 600px) {
-    article {
-        width: 90vw;
+    :root {
+        --page-width: 90vw;
     }
 }
 
 @media only screen and (min-width: 600px) {
-    article {
-        width: 70vw;
+    :root {
+        --page-width: 70vw;
     }
 }
 
 @media only screen and (min-width: 768px) {
-    article {
-        width: 60vw;
+    :root {
+        --page-width: 60vw;
     }
 }
 
 @media only screen and (min-width: 992px) {
-    article {
-        width: 50vw;
+    :root {
+        --page-width: 50vw;
     }
 }
 
 @media only screen and (min-width: 1200px) {
-    article {
-        width: 40vw;
+    :root {
+        --page-width: 40vw;
     }
 }
