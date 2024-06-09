@@ -2,11 +2,14 @@
     <a href="index.php"><img src="img/fedora.png" alt="Guinea pig logo"></a>
     <div></div>
     <p>
-        Document code, click to copy:<br>
         <?php
-            if($file)
+            if($file === 'homepage')
             {
-                echo '<button onclick="copyCodeToClipboard()"><b id="document-code">' . $documentName . '</b></button>';
+                echo '';
+            }
+            elseif($file == true)
+            {
+                echo 'Document code, click to copy:<br><button onclick="copyCodeToClipboard()"><b id="document-code">' . $documentName . '</b></button>';
             }
             else
             {

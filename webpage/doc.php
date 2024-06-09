@@ -25,7 +25,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <title><?php echo $documentName; ?></title>
+    <title><?php echo str_replace('-', ' ', $documentName); ?></title>
 </head>
 <body>
     <?php
