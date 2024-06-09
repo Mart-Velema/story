@@ -80,6 +80,15 @@ article h1.ctl {
     transition: 0.5s;
 }
 
+.block a {
+    text-decoration: none;
+    color: var(--text-colour);
+}
+
+.block a:visited {
+    color: var(--text-colour);
+}
+
 .block h2:hover{
     color: #8B728E;
 }

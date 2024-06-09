@@ -2,3 +2,4 @@ test
 webpage/output/*
 config.sh
 *.ico
+documents.json
