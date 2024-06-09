@@ -8,7 +8,7 @@ Story updater is a collectio of tools to ease the publishing of stories related 
 
 The story updater relies on a few packages to work. You can install them with the package manager of your likings, but I only tested this on Ubuntu.
 ```bash
-sudo apt install libreoffice-common libreoffice-java-common pandoc sed
+sudo apt install libreoffice libreoffice-java-common pandoc sed
 ```
 
 For non Ubuntu based distro, you need these packages from your package manager:
