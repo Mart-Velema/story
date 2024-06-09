@@ -8,6 +8,7 @@ footer {
 }
 
 footer div {
+    padding-block: 2%;
     padding-inline: 10%;
     align-self: center;
 }
