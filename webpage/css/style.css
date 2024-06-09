@@ -120,6 +120,10 @@ article h1.ctl {
     .story-links {
         flex-direction: column;
     }
+
+    header {
+        grid-template-columns: 20% 20% 60%;
+    }
 }
 
 @media only screen and (min-width: 600px) {
@@ -133,6 +137,10 @@ article h1.ctl {
 
     .story-links {
         flex-direction: column;
+    }
+
+    header {
+        grid-template-columns: 20% 20% 60%;
     }
 }
 
@@ -148,6 +156,10 @@ article h1.ctl {
     .story-links {
         flex-direction: column;
     }
+
+    header {
+        grid-template-columns: 20% 20% 60%;
+    }
 }
 
 @media only screen and (min-width: 992px) {
@@ -161,6 +173,10 @@ article h1.ctl {
 
     .story-links {
         flex-direction: row;
+    }
+
+    header {
+        grid-template-columns: 20% 40% 40%;
     }
 }
 
@@ -176,5 +192,9 @@ article h1.ctl {
 
     .story-links {
         flex-direction: row;
+    }
+
+    header {
+        grid-template-columns: 20% 60% 20%;
     }
 }

@@ -38,7 +38,7 @@
             <div class="block"> 
                 <h2>Document code</h2>
                 <div class="inner-block">
-                    <form action="" method="get">
+                    <form action="doc.php" method="get">
                         <label for="d">have a specific document-code? You can enter it here to go directly to that page:</label>
                         <div>
                             <input type="text" name="d" id="d">
