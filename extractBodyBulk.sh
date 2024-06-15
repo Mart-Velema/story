@@ -2,6 +2,11 @@
 
 source config.sh
 
+if [ ! -d $outputdir ];
+then
+    mkdir "$outputdir"
+fi
+
 getHtmlBody() 
 {
     local dir="$1"
