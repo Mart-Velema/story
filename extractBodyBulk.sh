@@ -4,6 +4,7 @@ source config.sh
 
 if [ ! -d $outputdir ];
 then
+    echo "Making output directory at : $outputdir"
     mkdir "$outputdir"
 fi
 
