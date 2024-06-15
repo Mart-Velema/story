@@ -27,7 +27,7 @@ main {
     justify-content: center;
 }
 
-article {
+article, .homepage {
     width: var(--page-width);
 }
 
@@ -59,10 +59,6 @@ article h1.ctl {
     font-family: "FreeSans"; 
     font-size: 18pt; 
     font-weight: bold 
-}
-
-.homepage {
-    width: var(--page-width);
 }
 
 .block {
