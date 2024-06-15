@@ -24,6 +24,7 @@ header button {
     background-color: var(--secondary-colour);
     color: var(--text-colour);
     font-size: 20px;
+    border: none;
 }
 
 header button:hover {

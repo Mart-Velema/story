@@ -77,6 +77,10 @@ article h1.ctl {
     transition: 0.5s;
 }
 
+.block h2:hover{
+    color: #8B728E;
+}
+
 .block a {
     text-decoration: none;
     color: var(--text-colour);
@@ -86,9 +90,6 @@ article h1.ctl {
     color: var(--text-colour);
 }
 
-.block h2:hover{
-    color: #8B728E;
-}
 
 .inner-block {
     display: flex;
