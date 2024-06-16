@@ -31,7 +31,7 @@ getHtmlBody()
             continue
         fi
 
-        local body_content=$(pandoc "$htmlFile" --standalone --to html5 --quiet | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d' | sed 's/<br \/>/<br>/g')
+        local body_content=$(pandoc "$htmlFile" --standalone --to html5 --quiet | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d' | sed 's/<br \/>/<br>/g' | sed 's/\(<h1[^>]*>\)/<hr>\n\1/g')
         if [ $? -ne 0 ];
         then
             echo "Error: Failed to convert $htmlFile to HTML5"
