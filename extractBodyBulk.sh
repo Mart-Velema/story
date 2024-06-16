@@ -14,15 +14,16 @@ getHtmlBody()
     local directoryName=$(echo "${2//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
     for file in "$dir"/*.odt; 
     do
+        local filename=$(basename -- "$file")
+        filename="${filename%.*}"
+        local output_filename=$(echo "${filename//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
+
         libreoffice --headless --convert-to html "$file" --outdir "$dir"
         if [ $? -ne 0 ];
         then
             echo "Error: Failed to convert ODT $file to HTML"
             continue
         fi
-
-        local filename=$(basename -- "$file")
-        filename="${filename%.*}"
 
         local htmlFile="$dir/$filename.html"
         if [ ! -f "$htmlFile" ];
@@ -31,15 +32,18 @@ getHtmlBody()
             continue
         fi
 
-        local body_content=$(pandoc "$htmlFile" --standalone --to html5 --quiet | sed -n '/<body.*>/,/<\/body>/p' | sed '1d;$d' | sed 's/<br \/>/<br>/g' | sed 's/\(<h1[^>]*>\)/<hr>\n\1/g')
+        local body_content=$(pandoc "$htmlFile" --standalone --to html5 --quiet | \
+            sed -n '/<body.*>/,/<\/body>/p' |
+            sed '1d;$d' |
+            sed 's/<br \/>/<br>/g' |
+            sed 's/\(<h1[^>]*>\)/<hr>\n\1/g')
+
         if [ $? -ne 0 ];
         then
             echo "Error: Failed to convert $htmlFile to HTML5"
             rm -f "$htmlFile"
             continue
         fi
-
-        local output_filename=$(echo "${filename//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
         
         echo "$body_content" > "$outputdir/$directoryName-$output_filename.html"
 
