@@ -1,3 +1,5 @@
+cd /var/www/story
+
 source config.sh
 
 if [ $resetGit -eq 1 ];
