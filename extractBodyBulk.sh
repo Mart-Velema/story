@@ -48,6 +48,7 @@ getHtmlBody()
         fi
         
         echo "$body_content" > "$outputdir/$directoryName-$output_filename.html"
+        echo "Succesfully converted $file to $outputdir/$directoryName-$output_filename.html"
 
         rm -f "$htmlFile"
     done
