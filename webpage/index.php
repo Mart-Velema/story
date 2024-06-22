@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <meta name="keywords" content="infinite night, hellbound steel, tale of anita">
+    <meta name="description" content="Homepage of the Infintie Night Timeline">
+    <meta name="author" content="Marxwell">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
