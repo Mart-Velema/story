@@ -1,21 +1,28 @@
 <?php
-    if(array_key_exists('d', $_GET))
+    $documentName = filter_input(INPUT_GET, 'd', FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+    $isValidFile = false;
+
+    if($documentName)
     {
-        $documentName = strtolower($_GET['d']);
-        if(file_exists('output/' . $documentName . '.html'))
+        $documentName = mb_strtolower($documentName);
+        $documentName = preg_replace('/[^a-z0-9\-]/', '-', $documentName);
+
+        $filePath = realpath('output/' . $documentName . '.html');
+        $baseDir = realpath('output');
+
+        if($filePath && strpos($filePath, $baseDir) === 0)
         {
-            $file = true;
+            $isValidFile = true;
+            $title = str_replace('-', ' ', $documentName);
         }
         else
         {
-            $documentName = "File does not exist";
-            $file = false;
+            $title = 'Invalid file!';
         }
     }
     else
     {
-        $documentName = "No file selected";
-        $file = false;
+        $title = 'No file selected!';
     }
 ?>
 
@@ -24,8 +31,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
-    <title><?php echo str_replace('-', ' ', $documentName); ?></title>
+    <link rel="stylesheet" href="css/style.css?v=<?php echo filemtime('css/style.css'); ?>">
+    <title><?php echo htmlspecialchars($title); ?></title>
 </head>
 <body>
     <?php
@@ -34,13 +41,13 @@
     <main>
         <article>
             <?php
-                if($file)
+                if($isValidFile)
                 {
                     include 'output/' . $documentName . '.html';
                 }
                 else
                 {
-                    echo $documentName;
+                    echo '<p>' . htmlspecialchars($title) . '</p>';
                 }
             ?>
         </article>
