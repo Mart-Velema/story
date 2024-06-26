@@ -3,17 +3,17 @@
     <div></div>
     <p>
         <?php
-            if($file === 'homepage')
+            if(!isset($isValidFile))
             {
                 echo '';
             }
-            elseif($file == true)
+            elseif($isValidFile)
             {
                 echo 'Document code, click to copy:<br><button onclick="copyCodeToClipboard()"><b id="document-code">' . $documentName . '</b></button>';
             }
             else
             {
-                echo 'Invalid document code';
+                echo $title;
             }
         ?>
     </p>

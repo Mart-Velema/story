@@ -8,7 +8,6 @@
 </head>
 <body>
     <?php
-        $file = 'homepage';
         include 'components/header.php';
     ?>
     <main>
