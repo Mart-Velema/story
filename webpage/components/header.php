@@ -1,5 +1,5 @@
 <header id="header">
-    <a href="index.php"><img src="img/fedora.png" alt="Guinea pig logo"></a>
+    <a href="index.php"><img src="/favicon.ico" alt="Guinea pig logo"></a>
     <div></div>
     <p>
         <?php
