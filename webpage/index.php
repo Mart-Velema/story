@@ -33,19 +33,6 @@
                     </ul>
                 </div>
             </div>
-            <!-- document-code form -->
-            <div class="block"> 
-                <h2>Document code</h2>
-                <div class="inner-block">
-                    <form action="doc.php" method="get">
-                        <label for="d">have a specific document-code? You can enter it here to go directly to that page:</label>
-                        <div>
-                            <input type="text" name="d" id="d">
-                            <button type="submit">Go to document</button>
-                        </div>
-                    </form>
-                </div>
-            </div>
             <hr>
             <!-- Auto-generated blocks -->
             <?php
