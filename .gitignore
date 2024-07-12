@@ -1,4 +1,5 @@
 test
 archive
 webpage/output/
+*.ico
 config.sh
