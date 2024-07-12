@@ -37,7 +37,8 @@ getHtmlBody()
             sed -n '/<body.*>/,/<\/body>/p' | \
             sed '1d;$d' | \
             sed 's/<br \/>/<br>/g' | \
-            sed 's/\(<h1[^>]*>\)/<hr>\n\1/g'
+            sed 's/\(<h1[^>]*>\)/<hr>\n\1/g' | \
+            sed 's|<img src="|<img src="output/|g' 
         )
 
         if [ $? -ne 0 ];
