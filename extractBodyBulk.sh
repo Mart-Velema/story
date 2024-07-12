@@ -64,11 +64,16 @@ getHtmlBody()
         fi
         echo "Succesfully converted $file to $outputdir/$directoryName-$output_filename.html"
 
-        mv -v $outputdir/*.png "$outputdir/img/"
-        if [ $? -ne 0 ];
+        if ls "$outputdir"/*.png 1> /dev/null 2>&1; 
         then
-            echo "Error: Failed to move images to image directory"
-            continue
+            mv -v "$outputdir"/*.png "$outputdir/img/"
+            if [ $? -ne 0 ]; 
+            then
+                echo "Error: Failed to move images of $file to image directory"
+                continue
+            fi
+        else
+            echo "No images to move for $file"
         fi
 
         rm -f "$htmlFile"
