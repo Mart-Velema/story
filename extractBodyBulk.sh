@@ -18,14 +18,14 @@ getHtmlBody()
         filename="${filename%.*}"
         local output_filename=$(echo "${filename//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
 
-        libreoffice --headless --convert-to html "$file" --outdir "$dir"
+        libreoffice --headless --convert-to html "$file" --outdir "$outputdir"
         if [ $? -ne 0 ];
         then
             echo "Error: Failed to convert ODT $file to HTML"
             continue
         fi
 
-        local htmlFile="$dir/$filename.html"
+        local htmlFile="$outputdir/$filename.html"
         if [ ! -f "$htmlFile" ];
         then
             echo "Error: $htmlFile not found after conversion"
