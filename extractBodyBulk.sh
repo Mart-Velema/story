@@ -8,6 +8,12 @@ then
     mkdir "$outputdir"
 fi
 
+if [ ! -d "$outputdir/img" ]
+then
+    echo "Making output directory at : $outputdir/img"
+    mkdir "$outputdir/img"
+fi
+
 getHtmlBody() 
 {
     local dir="$1"
@@ -29,6 +35,7 @@ getHtmlBody()
         if [ ! -f "$htmlFile" ];
         then
             echo "Error: $htmlFile not found after conversion"
+            rm -f *.png
             continue
         fi
 
@@ -38,18 +45,31 @@ getHtmlBody()
             sed '1d;$d' | \
             sed 's/<br \/>/<br>/g' | \
             sed 's/\(<h1[^>]*>\)/<hr>\n\1/g' | \
-            sed 's|<img src="|<img src="output/|g' 
+            sed 's|<img src="|<img src="output/img/|g' 
         )
 
         if [ $? -ne 0 ];
         then
             echo "Error: Failed to convert $htmlFile to HTML5"
-            rm -f "$htmlFile"
+            rm -fv "$htmlFile"
+            rm -fv *.png
             continue
         fi
         
         echo "$body_content" > "$outputdir/$directoryName-$output_filename.html"
+        if [ $? -ne 0 ];
+        then
+            echo "Error: Failed to put output into $outputdir/$directoryName-$output_filename.html"
+            continue
+        fi
         echo "Succesfully converted $file to $outputdir/$directoryName-$output_filename.html"
+
+        mv -v $outputdir/*.png "$outputdir/img/"
+        if [ $? -ne 0 ];
+        then
+            echo "Error: Failed to move images to image directory"
+            continue
+        fi
 
         rm -f "$htmlFile"
     done
