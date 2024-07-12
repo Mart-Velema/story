@@ -56,6 +56,5 @@
         include 'components/footer.php';
     ?>
     <script src="js/header.js"></script>
-    <script src="js/document-code.js"></script>
 </body>
 </html>
