@@ -72,6 +72,7 @@ getHtmlBody()
                 echo "Error: Failed to move images of $file to image directory"
                 continue
             fi
+            echo "Succesfully moved images of $file to $outputdir/img/"
         else
             echo "No images to move for $file"
         fi
