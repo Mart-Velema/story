@@ -3,7 +3,7 @@
 cd /var/www/story
 
 source config.sh
-
+date -d @$(date -u +%s)
 if [ $resetGit -eq 1 ];
 then
     echo "Updating Git..."
