@@ -41,11 +41,11 @@ getHtmlBody()
 
         local body_content=$(
             pandoc "$htmlFile" --standalone --to html5 --quiet | \
-            sed -n '/<body.*>/,/<\/body>/p' | \
-            sed '1d;$d' | \
-            sed 's/<br \/>/<br>/g' | \
-            sed 's/\(<h1[^>]*>\)/<hr>\n\1/g' | \
-            sed 's|<img src="|<img src="output/img/|g' 
+            sed -n "/<body.*>/,/<\/body>/p" | \
+            sed "1d;\$d" | \
+            sed "s/<br \/>/<br>/g" | \
+            sed "s/\(<h1[^>]*>\)/<hr>\n\1/g" | \
+            sed "s|<img src=\"|<img src=\"output/img/$output_filename/|g" 
         )
 
         if [ $? -ne 0 ];
@@ -66,7 +66,14 @@ getHtmlBody()
 
         if ls "$outputdir"/*.png 1> /dev/null 2>&1; 
         then
-            mv -v "$outputdir"/*.png "$outputdir/img/"
+            if [ ! -d "$outputdir/img/$output_filename" ]
+            then
+                echo "Making output directory at : $outputdir/img"
+                mkdir "$outputdir/img/$output_filename"
+            fi
+
+            mv -v "$outputdir"/*.png "$outputdir/img/$output_filename"
+
             if [ $? -ne 0 ]; 
             then
                 echo "Error: Failed to move images of $file to image directory"
