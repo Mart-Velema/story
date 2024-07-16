@@ -47,7 +47,7 @@
                 }
                 else
                 {
-                    echo '<p>' . htmlspecialchars($title) . '</p>';
+                    echo '<a href="index.php">' . htmlspecialchars($title) . '</a>';
                 }
             ?>
         </article>

@@ -91,6 +91,7 @@ getHtmlBody()
 for dir in "${directories[@]}"; 
 do
     fullpath="$basedir/$dir"
+    date -d @$(date -u +%s)
     if [ -d "$fullpath" ];
     then
         getHtmlBody "$fullpath" "$dir"
