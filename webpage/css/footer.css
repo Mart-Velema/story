@@ -16,7 +16,7 @@ footer div {
 footer ul {
     display: flex;
     justify-content: space-around;
-    justify-self: center;
+    margin-block: 5px;
 }
 
 footer li {
@@ -29,11 +29,23 @@ footer a {
     color: var(--text-colour);
 }
 
-footer img {
-    filter: grayscale(100);
+footer i {
+    color: gray;
     transition: 0.5s;
 }
 
-footer img:hover {
-    filter: grayscale(0);
+.fa-discord:hover {
+    color: #7289da;
+}
+
+.fa-youtube:hover {
+    color: #ff0000; 
+}
+
+.fa-twitch:hover {
+    color: #9146ff;
+}
+
+.twitter:hover {
+    color: #1da1f2;
 }
