@@ -21,6 +21,7 @@ getHtmlBody()
     for file in "$dir"/*.odt; 
     do
         local filename=$(basename -- "$file")
+        echo "===== converting $dir ====="
         filename="${filename%.*}"
         local output_filename=$(echo "${filename//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
 
