@@ -1,5 +1,5 @@
 footer {
-    width: 100vw;
+    width: 100%;
     min-height: 50px;
     background-color: var(--secondary-colour);
     display: grid;
