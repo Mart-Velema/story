@@ -12,7 +12,7 @@
         include 'components/header.php';
     ?>
     <main>
-        <div class="homepage">
+        <article>
             <!-- Introduciton -->
             <div class="block"> 
                 <h2>The Infinite Night Timeline</h2>
@@ -59,7 +59,7 @@
                     }
                 }
             ?>
-        </div>
+        </article>
     </main>
     <?php
         include 'components/footer.php';
