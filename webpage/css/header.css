@@ -16,18 +16,3 @@ header img {
     height: 40px;
     padding-left: 1vh;
 }
-
-header p {
-    margin: 0;
-}
-
-header button {
-    background-color: var(--secondary-colour);
-    color: var(--text-colour);
-    font-size: 20px;
-    border: none;
-}
-
-header button:hover {
-    cursor: copy;
-}
