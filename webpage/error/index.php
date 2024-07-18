@@ -31,7 +31,7 @@
     <main>
         <div class="homepage">
             <div class="block"> 
-                <h2><?php echo $errorTitle; ?></h2>
+                <a href="http://story.infinite-night.com"><h2><?php echo $errorTitle; ?></h2></a>
                 <div class="inner-block">
                     <p>
                         <?php
