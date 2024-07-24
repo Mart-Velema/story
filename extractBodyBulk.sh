@@ -42,11 +42,14 @@ getHtmlBody()
 
         local body_content=$(
             pandoc "$htmlFile" --standalone --to html5 --quiet | \
-            sed -n "/<body.*>/,/<\/body>/p" | \
-            sed "1d;\$d" | \
-            sed "s/<br \/>/<br>/g" | \
-            sed "s/\(<h1[^>]*>\)/<hr>\n\1/g" | \
-            sed "s|<img src=\"|<img src=\"output/img/$output_filename/|g" 
+            sed -n '/<body[^>]*>/,/<\/body>/ {
+                /^<body[^>]*>/d
+                /<\/body>/d
+                s/<br \/>/<br>/g
+                s/<h1[^>]*>/<hr>\n&/g
+                s|<img src="|<img alt="image from '"$output_filename"'\" src="output/img/'$output_filename'/|g
+                p
+            }'
         )
 
         if [ $? -ne 0 ];
