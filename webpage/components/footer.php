@@ -6,10 +6,10 @@
     </div>
     <div>
         <ul class="story-links">
-            <li><a href="https://story.infinite-night.com/collection/hs.php">Hellbound Steel</a></li>
-            <li><a href="https://story.infinite-night.com/collection/index.php">Mainline</a></li>
-            <li><a href="https://story.infinite-night.com/collection/toa.php">Tale of Anita</a></li>
-            <li><a href="https://story.infinite-night.com/collection/vs.php">Violent Stars</a></li>
+            <li><a href="/collection/hs.php">Hellbound Steel</a></li>
+            <li><a href="/collection/index.php">Mainline</a></li>
+            <li><a href="/collection/toa.php">Tale of Anita</a></li>
+            <li><a href="/collection/vs.php">Violent Stars</a></li>
         </ul>
     </div>
     <div>
