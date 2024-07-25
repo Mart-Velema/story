@@ -34,6 +34,10 @@ footer i {
     transition: 0.5s;
 }
 
+footer hr {
+    margin-block: 1em;
+}
+
 .fa-discord:hover {
     color: #7289da;
 }
