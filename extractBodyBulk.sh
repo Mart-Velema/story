@@ -19,6 +19,14 @@ getHtmlBody()
     local dir="$1"
     local directoryName=$(echo "${2//[^a-zA-Z0-9]/-}" | tr '[:upper:]' '[:lower:]')
     echo "===== converting directory $dir ====="
+
+    files=$(ls "$dir"/*.odt 2> /dev/null | wc -l)
+    if [ "$files" = "0" ]
+    then
+        echo "Warning: directory $dir does not contain any .odt files"
+        return
+    fi
+
     for file in "$dir"/*.odt; 
     do
         local filename=$(basename -- "$file")
