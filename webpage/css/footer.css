@@ -24,7 +24,7 @@ footer li {
     text-decoration: underline;
 }
 
-footer a {
+footer a, footer a:visited {
     text-decoration: none;
     color: var(--text-colour);
 }

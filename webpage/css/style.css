@@ -39,7 +39,7 @@ article p {
     background: transparent 
 }
 
-article a, a:visited {
+article a, article a:visited {
     color: var(--link-colour);
 }
 
