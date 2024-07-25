@@ -6,12 +6,13 @@
 }
 
 :root {
-    font-family: sans-serif;
+    font-family: Helvetica, Arial, sans-serif;;
     --header-height: 50px;
-    --main-colour: #242424;
+    --main-colour: rgb(28, 27, 34);
     --secondary-colour: #1b0117;
     --primary-colour: #270722;
-    --text-colour: whitesmoke;
+    --text-colour: rgb(251, 251, 254);
+    --link-colour: rgb(0, 221, 255);
 }
 
 body {
@@ -29,12 +30,17 @@ main {
 
 article {
     width: var(--page-width);
+    font-size: 20px;
 }
 
 article p {
-    line-height: 115%; 
+    line-height: 1.6em;; 
     margin-bottom: 0.1in; 
     background: transparent 
+}
+
+article a, a:visited {
+    color: var(--link-colour);
 }
 
 article h1 {
@@ -107,7 +113,7 @@ article h1.ctl {
 
 @media only screen and (min-width: 80ch) {
     :root {
-        --page-width: 80ch;
+        --page-width: 30em;
     }
 
     footer {
