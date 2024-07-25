@@ -69,18 +69,19 @@ getHtmlBody()
         fi
         echo "Succesfully converted $file to $outputdir/$directoryName-$output_filename.html"
 
-        local has_images=false
+        local image_file_extentions=('jpg' 'jpeg' 'png')
+        local used_image_file_extentions=()
 
-        for image_file in "$outputdir"/*.{png,jpeg,jpg};
+
+        for i in "${image_file_extentions[@]}";
         do
-            if [ -e "$image_file" ];
+            if [ -e "$outputdir"/*."$i" ];
             then
-                has_images=true
-                break
+                used_image_file_extentions+="$i"
             fi
         done
 
-        if [ "$has_images" = true ]; 
+        if [ "${#used_image_file_extentions[@]}" -gt 0 ]; 
         then
             if [ ! -d "$outputdir/img/$output_filename" ]
             then
@@ -88,43 +89,18 @@ getHtmlBody()
                 mkdir "$outputdir/img/$output_filename"
             fi
 
-            local amount_of_images_moved=0
-
-            mv "$outputdir"/*.png "$outputdir/img/$output_filename"
-            if [ $? -ne 0 ]; 
-            then
-                echo "Warning: Failed to move PNG files of $file to image directory. This could be because there are no PNG images"
-            else
-                (($amount_of_images_moved++))
-                echo "Moved all PNG images"
-            fi
-
-            mv "$outputdir"/*.jpeg "$outputdir/img/$output_filename"
-            if [ $? -ne 0 ]; 
-            then
-                echo "Warning: Failed to move JPEG files of $file to image directory. This could be because there are no JPEG images"
-            else
-                (($amount_of_images_moved++))
-                echo "Moved all JPEG images"
-            fi
-
-            mv "$outputdir"/*.jpg "$outputdir/img/$output_filename"
-            if [ $? -ne 0 ]; 
-            then
-                echo "Warning: Failed to move JPG files of $file to image directory. This could be because there are no JPG images"
-            else
-                (($amount_of_images_moved++))
-                echo "Moved all JPG images"
-            fi
-
-            if [ $amount_of_images_moved -gt 0 ];
-            then
-                echo "Error: Failed to move any images to $outputdir/img/$output_filename"
-            else
-                echo "Succesfully moved images of $file to $outputdir/img/$output_filename"
-            fi
+            for i in "${used_image_file_extentions[@]}";
+            do
+                mv "$outputdir"/*."$i" "$outputdir/img/$output_filename"
+                if [ $? -ne 0 ]; 
+                then
+                    echo "Error: Failed to move images to $outputdir/img/$output_filename"
+                else
+                    echo "Moved all images to $outputdir/img/$output_filename"
+                fi
+            done
         else
-            echo "No images to move for $file"
+            echo "No images to move for $output_filename"
         fi
 
         rm -f "$htmlFile"
