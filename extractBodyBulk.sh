@@ -69,7 +69,18 @@ getHtmlBody()
         fi
         echo "Succesfully converted $file to $outputdir/$directoryName-$output_filename.html"
 
-        if ls "$outputdir"/*.png 1> /dev/null 2>&1; 
+        local has_images=false
+
+        for image_file in "$outputdir"/*.{png,jpeg,jpg};
+        do
+            if [ -e "$image_file" ];
+            then
+                has_images=true
+                break
+            fi
+        done
+
+        if [ "$has_images" = true ]; 
         then
             if [ ! -d "$outputdir/img/$output_filename" ]
             then
@@ -77,14 +88,41 @@ getHtmlBody()
                 mkdir "$outputdir/img/$output_filename"
             fi
 
-            mv -v "$outputdir"/*.png "$outputdir/img/$output_filename"
+            local amount_of_images_moved=0
 
+            mv "$outputdir"/*.png "$outputdir/img/$output_filename"
             if [ $? -ne 0 ]; 
             then
-                echo "Error: Failed to move images of $file to image directory"
-                continue
+                echo "Warning: Failed to move PNG files of $file to image directory. This could be because there are no PNG images"
+            else
+                (($amount_of_images_moved++))
+                echo "Moved all PNG images"
             fi
-            echo "Succesfully moved images of $file to $outputdir/img/"
+
+            mv "$outputdir"/*.jpeg "$outputdir/img/$output_filename"
+            if [ $? -ne 0 ]; 
+            then
+                echo "Warning: Failed to move JPEG files of $file to image directory. This could be because there are no JPEG images"
+            else
+                (($amount_of_images_moved++))
+                echo "Moved all JPEG images"
+            fi
+
+            mv "$outputdir"/*.jpg "$outputdir/img/$output_filename"
+            if [ $? -ne 0 ]; 
+            then
+                echo "Warning: Failed to move JPG files of $file to image directory. This could be because there are no JPG images"
+            else
+                (($amount_of_images_moved++))
+                echo "Moved all JPG images"
+            fi
+
+            if [ $amount_of_images_moved -gt 0 ];
+            then
+                echo "Error: Failed to move any images to $outputdir/img/$output_filename"
+            else
+                echo "Succesfully moved images of $file to $outputdir/img/$output_filename"
+            fi
         else
             echo "No images to move for $file"
         fi
