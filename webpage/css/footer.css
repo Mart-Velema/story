@@ -8,15 +8,14 @@ footer {
 }
 
 footer div {
-    padding-block: 2%;
-    padding-inline: 10%;
+    padding-block: 1em;
+    padding-inline: 2em;
     align-self: center;
 }
 
 footer ul {
     display: flex;
     justify-content: space-around;
-    margin-block: 5px;
 }
 
 footer li {
