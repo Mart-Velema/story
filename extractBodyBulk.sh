@@ -2,16 +2,26 @@
 
 source config.sh
 
-if [ ! -d $outputdir ];
+if [ -z "$outputdir" ];
 then
-    echo "Making output directory at : $outputdir"
+    echo "$outputdir is not defined! This might cause critical issues, and should be fixed IMMEDIATELY"
+    exit 1
+elif [ ! -d "$outputdir" ];
+then
+    echo "Making output directory at: $outputdir"
     mkdir "$outputdir"
+else
+    echo "Empying $outputdir"
+    rm -fv "$outputdir/"*
 fi
 
 if [ ! -d "$outputdir/img" ]
 then
     echo "Making output directory at : $outputdir/img"
     mkdir "$outputdir/img"
+else
+    echo "Emptying images from $outputdir"
+    rm -rfv "$outputdir/img/"*
 fi
 
 getHtmlBody() 
