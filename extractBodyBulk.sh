@@ -66,7 +66,7 @@ getHtmlBody()
                 /<\/body>/d
                 s/<br \/>/<br>/g
                 s/<h1[^>]*>/<hr>\n&/g
-                s|<img src="|<img alt="image from '"$output_filename"'\" src="output/img/'$output_filename'/|g
+                s|<img src="|<img alt="image from '"$directoryName-$output_filename"'\" src="output/img/'$directoryName-$output_filename'/|g
                 p
             }'
         )
@@ -101,20 +101,20 @@ getHtmlBody()
 
         if [ "${#used_image_file_extentions[@]}" -gt 0 ]; 
         then
-            if [ ! -d "$outputdir/img/$output_filename" ]
+            if [ ! -d "$outputdir/img/$directoryName-$output_filename" ]
             then
-                echo "Making output directory at : $outputdir/img"
-                mkdir "$outputdir/img/$output_filename"
+                echo "Making output directory $directoryName-$output_filename at : $outputdir/img"
+                mkdir "$outputdir/img/$directoryName-$output_filename"
             fi
 
             for i in "${used_image_file_extentions[@]}";
             do
-                mv "$outputdir"/*."$i" "$outputdir/img/$output_filename"
+                mv "$outputdir"/*."$i" "$outputdir/img/$directoryName-$output_filename"
                 if [ $? -ne 0 ]; 
                 then
-                    echo "Error: Failed to move images to $outputdir/img/$output_filename"
+                    echo "Error: Failed to move images to $outputdir/img/$directoryName-$output_filename"
                 else
-                    echo "Moved all images to $outputdir/img/$output_filename"
+                    echo "Moved all images to $outputdir/img/$directoryName-$output_filename"
                 fi
             done
         else
