@@ -2,10 +2,9 @@ header {
     display: grid;
     grid-template-columns: 20% 60% 20%;
     align-items: center;
-    height: 50px;
+    height: var(--header-height);
     width: 100%;
     background-color: var(--secondary-colour);
-    z-index: 100;
     box-shadow: 0px 1px 3px black;
     position: fixed;
     height: var(--header-height);
