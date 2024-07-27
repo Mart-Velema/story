@@ -122,6 +122,7 @@ article h1.ctl {
 
     .story-links {
         flex-direction: row;
+        line-height: normal;
     }
 }
 
@@ -136,5 +137,6 @@ article h1.ctl {
 
     .story-links {
         flex-direction: column;
+        line-height: 2em;
     }
 }

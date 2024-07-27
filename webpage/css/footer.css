@@ -16,6 +16,7 @@ footer div {
 footer ul {
     display: flex;
     justify-content: space-around;
+    padding: unset;
 }
 
 footer li {
