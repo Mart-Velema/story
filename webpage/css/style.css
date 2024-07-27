@@ -15,10 +15,6 @@
     --link-colour: rgb(0, 221, 255);
 }
 
-body {
-    margin: 0;
-}
-
 main {
     padding-top: calc(var(--header-height) + 2em);
     min-height: calc(100vh - var(--header-height) - 2em);
