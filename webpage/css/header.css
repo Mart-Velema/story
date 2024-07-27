@@ -13,5 +13,6 @@ header {
 header img {
     object-fit: scale-down;
     height: 40px;
-    padding-left: 1vh;
+    width: 40px;
+    margin-left: 1em;
 }
