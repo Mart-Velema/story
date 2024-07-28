@@ -24,7 +24,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/error/style.css?v=<?php echo filemtime('/error/style.css'); ?>">
+    <link rel="stylesheet" href="style.css?v=<?php echo filemtime('style.css'); ?>">
     <title>Error: <?php echo $statusCode; ?></title>
 </head>
 <body>
