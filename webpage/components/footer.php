@@ -6,10 +6,10 @@
     </div>
     <div>
         <ul class="story-links">
-            <li><a href="/collection/hs.php">Hellbound Steel</a></li>
             <li><a href="/collection/in.php">Mainline</a></li>
-            <li><a href="/collection/toa.php">Tale of Anita</a></li>
             <li><a href="/collection/vs.php">Violent Stars</a></li>
+            <li><a href="/collection/toa.php">Tale of Anita</a></li>
+            <li><a href="/collection/hs.php">Hellbound Steel</a></li>
         </ul>
     </div>
     <div>
