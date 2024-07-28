@@ -1,3 +1,4 @@
 webpage/output/
 *.ico
 config.sh
+config.py
