@@ -27,7 +27,7 @@
             <hr>
             <!-- Auto-generated blocks -->
             <?php
-                $jsonFile = 'hs.json';
+                $jsonFile = 'vs.json';
                 $jsonData = file_exists($jsonFile) ? json_decode(file_get_contents($jsonFile), true) : [];
                 if (json_last_error() !== JSON_ERROR_NONE) 
                 {
