@@ -20,7 +20,7 @@
                 <h2>Tale of Anita</h2>
                 <div class="inner-block">
                     <p>
-                        &lt;PLACEHOLDER&gt;
+                        Tale of Anita takes place in the year of 2070. It's a continuiation of the Infinite Night storyline, where a brave girl named Anita Nikita goes on an adventure with her grandfather to seek out where her father has been. During this, she will learn the horrors caused by everyone involved with the Infinite Night Project and the evil mechs that have ravaged the land, and taken them for themselfes. Will she suceed in finding her dad? Or will she find him among the stars?
                     </p>
                 </div>
             </div>
