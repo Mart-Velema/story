@@ -20,7 +20,7 @@
                 <h2>Violent Stars</h2>
                 <div class="inner-block">
                     <p>
-                        Violent Stars takes place in parallel with the Infinite Night storyline. It's about a young adult named Elliot, who has been enroled into the space program as a mechanic for the Refined European Union. Unbeknownst to him, a group of the vicims from the Steelskin Experiments have formed a terrorist orginisation. Going under the name of Raven’s Ascendance, are out to something that is being kept a secret in the rocket launch station. It's up to him and his friends to fend off the intruders, if they stay alive long enough for it to matter. <br><br>It's the basis for a choose-your-own-adventure type of story, where the choices you make, can inpact the final outcome.
+                        Violent Stars takes place in parallel with the Infinite Night storyline. It's about a young adult named Elliot, who has been enroled into the space program as a mechanic for the Refined European Union. Unbeknownst to him, a group of the vicims from the Steelskin Experiments have formed a terrorist orginisation. Going under the name of Raven's Ascendance, are out to something that is being kept a secret in the rocket launch station. It's up to him and his friends to fend off the intruders, if they stay alive long enough for it to matter. <br><br>It's the basis for a choose-your-own-adventure type of story, where the choices you make, can inpact the final outcome.
                     </p>
                 </div>
             </div>

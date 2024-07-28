@@ -20,7 +20,7 @@
                 <h2>Infinite Night</h2>
                 <div class="inner-block">
                     <p>
-                    Infinite Night is set in the future of the year 2060. The mainline story is about a group of politicans, who have been elected to repair whatever is left of the Reforemed European Union. All whilst the country starts to get overrun by hunders of thousands of manhunters, and the rise of robots looming over the horison, all whilst the high Supreme Court watches it happen. <br>What dark secrets lie beyond the doors of the Supreme Court? Who is out to bring everything known to man to their knees?
+                        Infinite Night is set in the future of the year 2060. The mainline story is about a group of politicans, who have been elected to repair whatever is left of the Reforemed European Union. All whilst the country starts to get overrun by hunders of thousands of manhunters, and the rise of robots looming over the horison, all whilst the high Supreme Court watches it happen. <br>What dark secrets lie beyond the doors of the Supreme Court? Who is out to bring everything known to man to their knees?
                     </p>
                 </div>
             </div>
