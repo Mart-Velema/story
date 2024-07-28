@@ -20,7 +20,7 @@
                 <h2>Hellbound Steel</h2>
                 <div class="inner-block">
                     <p>
-                        &lt;PLACEHOLDER&gt;
+                    Hellbound Steel is set in the imaginairy city of Terra Lanice, where a small group of students get unwillingly sucked into the nuclear armsrace that is going on between the humans and Steel Demons.<br>With their furry companions on their side, they are ready to face the horrors that are contained underneath the mountains<br>They eat, fight, love and cry together, as they kick ass and save lifes.
                     </p>
                 </div>
             </div>
