@@ -4,7 +4,7 @@ from config import *
 
 def convert_odt_to_html(sub_directory, filename):
     final_file_name = \
-        (sub_directory + '-' + filename) \
+        (sub_directory + '-|-' + filename) \
         .replace(' ', '-') \
         .lower() \
         .strip('.odt')

@@ -5,7 +5,7 @@
     if($documentName)
     {
         $documentName = mb_strtolower($documentName);
-        $documentName = preg_replace('/[^a-z0-9\-]/', '-', $documentName);
+        $documentName = preg_replace('/[^a-z0-9\-]\|/', '-', $documentName);
 
         $filePath = realpath('output/' . $documentName . '.html');
         $baseDir = realpath('output');
