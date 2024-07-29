@@ -34,10 +34,6 @@ updateGit           # Set to 1 to automatically update using git
 usePythonUpdater    # Set to 0 to use the Bash based udpater
 ```
 
-The output directory will most likely be the same as the directory that you have assigned as your DocumentRoot in Apache2. If this is not the case, you can create a symbolic link instead of changing the output directory.
-```bash
-ln -s /path/to/your/outputdir /var/www/docs
-```
 
 ## Running the script
 
