@@ -54,7 +54,9 @@
                     '<div class="block">' .
                         '<a href="index.php"><h2>' . htmlspecialchars($title) . '</h2></a>' .
                         '<div class="inner-block">' .
-                            '<p>If you see this, that means that what you\'re looking for, does not exist. Clicking on the title allows you to go back to the homepage and try again to search what you\'re looking for</p>' .
+                            '<p>If you see this, that means that what you\'re looking for, does not exist. Clicking on the title allows you to go back to the homepage and try again to search what you\'re looking for. <br> File you requested: ' .
+                            htmlspecialchars($documentName) . 
+                            '</p>' .
                         '</div>' .
                     '</div>';
                 }
