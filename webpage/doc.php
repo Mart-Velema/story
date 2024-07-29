@@ -46,6 +46,7 @@
             <?php
                 if($isValidFile)
                 {
+                    echo '<h1>Table of Contents</h1>';
                     include 'output/' . $documentName . '.html';
                 }
                 else
