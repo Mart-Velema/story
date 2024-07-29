@@ -18,6 +18,7 @@ def convert_odt_to_html(sub_directory, filename):
             '--extract-media=' + output_directory + '/assets',
             '--template=html.template',
             '--lua-filter=filter.lua',
+            '--self-contained',
             '--quiet'
         ]
     )

@@ -26,6 +26,15 @@ article {
     font-size: 20px;
 }
 
+article ul:first-of-type {
+    list-style: none;
+    padding-left: 0;
+}
+
+article li {
+    margin-block: 1em;
+}
+
 article p {
     line-height: 1.6em;; 
     margin-bottom: 0.1in; 
