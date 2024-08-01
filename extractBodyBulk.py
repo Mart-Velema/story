@@ -35,7 +35,7 @@ def convert_odt_to_html(sub_directory, filename):
         print(f'Failed to convert file {final_file_name}: {ex}')
 
 # preparing directories
-os.makedirs(output_directory + '/assets', exist_ok=True)
+os.makedirs(os.path.join(output_directory, 'assets'), exist_ok=True)
 
 for sub_directory in sub_directories:
     sub_dir_path = os.path.join(input_directory, sub_directory)
