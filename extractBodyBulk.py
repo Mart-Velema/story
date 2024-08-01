@@ -1,6 +1,6 @@
 import pypandoc as pandoc
 import os
-from config import *
+from config import input_directory, output_directory, sub_directories
 
 def convert_odt_to_html(sub_directory, filename):
     base_name, file_extention = os.path.splitext(filename)
