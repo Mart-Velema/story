@@ -1,5 +1,5 @@
 <?php   
-if(!isset$jsonFile)
+if(!isset($jsonFile))
 {
     echo('JSON decode error: JSON filename is not declared');
     $jsonData = [];
