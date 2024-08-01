@@ -4,11 +4,11 @@ from config import input_directory, output_directory, sub_directories
 
 def convert_odt_to_html(sub_directory, filename):
     base_name, file_extention = os.path.splitext(filename)
-    if file_extention.lower() != ".odt":
+    if file_extention.lower() != '.odt':
         return
 
     final_file_name = \
-        f"{sub_directory}-|-{base_name}.html" \
+        f'{sub_directory}-|-{base_name}.html' \
         .replace(' ', '-') \
         .lower()
     
