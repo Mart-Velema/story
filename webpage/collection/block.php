@@ -1,4 +1,10 @@
 <?php   
+if(!isset$jsonFile)
+{
+    echo('JSON decode error: JSON filename is not declared');
+    $jsonData = [];
+}
+
 $jsonData = file_exists($jsonFile) ? json_decode(file_get_contents($jsonFile), true) : [];
 if (json_last_error() !== JSON_ERROR_NONE) 
 {
