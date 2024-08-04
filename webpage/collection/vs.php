@@ -28,7 +28,7 @@
             <!-- Auto-generated blocks -->
             <?php
                 $jsonFile = 'vs.json';
-                include 'block.php';
+                include '../components/block.php';
             ?>
         </article>
     </main>
