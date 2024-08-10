@@ -12,13 +12,15 @@ if (json_last_error() !== JSON_ERROR_NONE)
     $jsonData = [];
 }
 
+$prefix = $has_prefix ? '/doc.php?d=' : '';
+
 foreach($jsonData as $value)
 {
     if (isset($value['link'], $value['title'], $value['body']))
     {
         echo 
         '<div class="block">' .
-            '<a href="/doc.php?d=' . $value['link'] . '"><h2>' . $value['title'] . '</h2></a>' .
+            '<a href="' . $prefix  . $value['link'] . '"><h2>' . $value['title'] . '</h2></a>' .
             '<div class="inner-block">' .
                 '<p>' . nl2br($value['body']) . '</p>' .
             '</div>' .
