@@ -1,3 +1,7 @@
+<?php
+    include '../components/block.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -27,8 +31,7 @@
             <hr>
             <!-- Auto-generated blocks -->
             <?php
-                $jsonFile = 'toa.json';
-                include '../components/block.php';
+                blocks('toa.json');
             ?>
         </article>
     </main>

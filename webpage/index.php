@@ -1,3 +1,7 @@
+<?php
+    include 'components/block.php';
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -40,8 +44,7 @@
             <hr>
             <!-- Auto-generated blocks -->
             <?php
-                $jsonFile = 'documents.json';
-                include 'components/block.php';
+                blocks('documents.json', false);
             ?>
         </article>
     </main>
