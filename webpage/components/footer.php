@@ -19,7 +19,6 @@
             <li><a href="https://discord.gg/xvNg7Br" target="_blank"><i class="fab fa-discord" style="font-size: 32px;"></i></a></li>
             <li><a href="https://www.youtube.com/channel/UCPmDtSr9w7x0nsee1GsdC4A" target="_blank"><i class="fab fa-youtube" style="font-size: 32px;"></i></a></li>
             <li><a href="https://www.twitch.tv/1_hele_euro" target="_blank"><i class="fab fa-twitch" style="font-size: 32px;"></i></a></li>
-            <li><a href="https://twitter.com/1HeleEuro" target="_blank"><i class="fab fa-twitter" style="font-size: 32px;"></i></a></li>
         </ul>
         <hr>
         <p>
