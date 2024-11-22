@@ -1,10 +1,11 @@
 #!/bin/bash
 
-cd /var/www/story
+directory="/var/www/${1}"
+
+cd "${directory}"
 
 date -d @$(date -u +%s)
 
-echo "Updating Git..."
 git restore .
 git pull
 
